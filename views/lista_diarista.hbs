@@ -1,0 +1,39 @@
+<h1 class='my-5'>Lista de diaristas</h1>
+<table class='table table-dark table-striped'>
+  <thead>
+    <tr>
+      <th>NOME</th>
+      <th>ENDEREÇO</th>
+      <th>IDADE</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each diaristas}}
+      <tr>
+        <th>
+          <a href='/diaristas/diarista/{{this.id}}'>{{this.nome}}</a>
+        </th>
+        <th>{{this.endereco}}</th>
+        <th>{{this.idade}}</th>
+        <th>
+          <a
+            href='/diaristas/diarista/{{this.id}}/edit'
+            class='btn btn-primary'
+          >Editar</a>
+        </th>
+        <th>
+          <form action='/diaristas/{{this.id}}?_method=DELETE' method='post'>
+            <input
+              type='submit'
+              class='btn btn-danger'
+              onclick="return confirm('Tem certeza que deseja excluir este registro ?')"
+              value='Deletar'
+            />
+          </form>
+        </th>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

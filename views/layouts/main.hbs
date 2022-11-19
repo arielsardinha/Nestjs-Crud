@@ -1,0 +1,33 @@
+<html lang='pt-BR'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'
+    />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <header class='bg-dark'>
+      <nav class='navbar navbar-dark container'>
+        <ul class='nav'>
+          <li class='nav-item'>
+            <a
+              class='nav-link active'
+              aria-current='page'
+              href='/diaristas'
+            >Tabela de diaristas</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='/diaristas/create'>Cadastrar diaristas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class='container'>
+      {{{body}}}
+    </main>
+  </body>
+</html>

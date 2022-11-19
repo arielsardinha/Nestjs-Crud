@@ -1,0 +1,41 @@
+<h1 class='my-5'>Editar Diarista: {{diarista.nome}} ID:{{diarista.id}}</h1>
+<form action='/diaristas/{{diarista.id}}?_method=patch' method='post'>
+  <div class='mb-3 row'>
+    <label for='inputNome' class='col-sm-2 col-form-label'>Nome:</label>
+    <div class='col-sm-10'>
+      <input
+        class='form-control'
+        id='inputNome'
+        name='nome'
+        value='{{diarista.nome}}'
+        required
+      />
+    </div>
+  </div>
+  <div class='mb-3 row'>
+    <label for='inputEndereco' class='col-sm-2 col-form-label'>Endereço:</label>
+    <div class='col-sm-10'>
+      <input
+        class='form-control'
+        id='inputEndereco'
+        name='endereco'
+        value='{{diarista.endereco}}'
+        required
+      />
+    </div>
+  </div>
+  <div class='mb-3 row'>
+    <label for='inputIdade' class='col-sm-2 col-form-label'>Idade:</label>
+    <div class='col-sm-10'>
+      <input
+        type='number'
+        class='form-control'
+        id='inputIdade'
+        name='idade'
+        value='{{diarista.idade}}'
+        required
+      />
+    </div>
+  </div>
+  <input type='submit' value='Atualizar' class='btn btn-primary' />
+</form>
